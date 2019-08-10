@@ -17,6 +17,7 @@ import static java.util.stream.Collectors.toMap;
 
 
 public class HtmlMapper {
+    public static final String TARGET_ELEMENT_ID = "make-everything-ok-button";
 
 //    private static Logger LOGGER = LoggerFactory.getLogger(HtmlMapper.class);
 
@@ -27,11 +28,10 @@ public class HtmlMapper {
 
         // Jsoup requires an absolute file path to resolve possible relative paths in HTML,
         // so providing InputStream through classpath resources is not a case
-        String resourcePath = "C:\\dev\\htmlmapper\\src\\main\\resources\\origin-file.html";
-        String diffFIlePath = "C:\\dev\\htmlmapper\\src\\main\\resources\\diff3.html";
-        String targetElementId = "make-everything-ok-button";
+        String resourcePath = args[0];
+        String diffFIlePath = args[1];
 
-        Element buttonOpt = findElementById(new File(resourcePath), targetElementId);
+        Element buttonOpt = findElementById(new File(resourcePath), TARGET_ELEMENT_ID);
 
         if (buttonOpt != null) {
             Map<String, String> targetElementAttributes = buttonOpt.attributes().asList().stream()
@@ -69,7 +69,7 @@ public class HtmlMapper {
             System.out.println(key.toString());
 
         } else {
-            System.out.println("No element by id " + targetElementId + "found !");
+            System.out.println("No element by id " + TARGET_ELEMENT_ID + "found !");
         }
 
     }
