@@ -2,28 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a1c4fb9-55e8-42cc-9355-99b451ddda06" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/diff4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/html-mapper-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/html-mapper-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/diff2_files/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/diff2_files/bootstrap.min.js.Без названия" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/diff2_files/custom.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/diff2_files/custom.js.Без названия" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/diff2_files/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/diff2_files/jquery.min.js.Без названия" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/diff2_files/sb-admin-2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/diff2_files/sb-admin-2.js.Без названия" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/diff3_files/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/diff3_files/bootstrap.min.js.Без названия" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/diff3_files/custom.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/diff3_files/custom.js.Без названия" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/diff3_files/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/diff3_files/jquery.min.js.Без названия" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/diff3_files/sb-admin-2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/diff3_files/sb-admin-2.js.Без названия" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HtmlMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HtmlMapper.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,10 +20,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="212">
+              <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/HtmlMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="1229">
+              <caret line="107" column="33" selection-start-line="107" selection-start-column="33" selection-end-line="107" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -50,12 +40,21 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.8/lombok-1.18.8-sources.jar!/lombok/extern/slf4j/Slf4j.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="44" column="103" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="103" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="340">
-                <caret line="20" column="174" lean-forward="true" selection-start-line="20" selection-start-column="174" selection-end-line="20" selection-end-column="174" />
+                <caret line="20" column="174" selection-start-line="20" selection-start-column="174" selection-end-line="20" selection-end-column="174" />
               </first_editor>
               <second_editor />
             </state>
@@ -80,10 +79,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/JsoupFindByIdSnippet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/HtmlMapper.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/.gitignor" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/HtmlMapper.java" />
       </list>
     </option>
   </component>
@@ -163,6 +162,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -215,7 +215,7 @@
       <workItem from="1565445133716" duration="1749000" />
       <workItem from="1565446945695" duration="1768000" />
       <workItem from="1565448761623" duration="1806000" />
-      <workItem from="1565450633768" duration="537000" />
+      <workItem from="1565450633768" duration="1256000" />
     </task>
     <task id="LOCAL-00001" summary="Configure build">
       <created>1565450244019</created>
@@ -231,15 +231,21 @@
       <option name="project" value="LOCAL" />
       <updated>1565450508305</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add readme">
+      <created>1565451198779</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1565451198779</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7472000" />
+    <option name="totallyTimeSpent" value="8191000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.024291499" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -258,7 +264,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.5186501" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3285968" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3285968" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3285968" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -319,14 +325,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Configure build" />
     <MESSAGE value="Add gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add gitignore" />
+    <MESSAGE value="Add readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add readme" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/HtmlMapper.java</url>
-          <line>73</line>
+          <line>56</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
           </properties>
@@ -334,7 +341,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/HtmlMapper.java</url>
-          <line>89</line>
+          <line>97</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
@@ -354,13 +361,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/target/classes/origin-file.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/target/classes/HtmlMapper.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -418,23 +418,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/HtmlMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="340">
-            <caret line="20" column="174" lean-forward="true" selection-start-line="20" selection-start-column="174" selection-end-line="20" selection-end-column="174" />
+            <caret line="20" column="174" selection-start-line="20" selection-start-column="174" selection-end-line="20" selection-end-column="174" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.8/lombok-1.18.8.jar!/lombok/extern/slf4j/Slf4j.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.8/lombok-1.18.8-sources.jar!/lombok/extern/slf4j/Slf4j.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="44" column="103" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/HtmlMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1229">
+          <caret line="107" column="33" selection-start-line="107" selection-start-column="33" selection-end-line="107" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,3 +1,4 @@
+import lombok.extern.slf4j.Slf4j;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.*;
 
@@ -15,19 +16,17 @@ import static java.util.stream.Collectors.toMap;
 //import org.slf4j.Logger;
 //import org.slf4j.LoggerFactory;
 
-
+@Slf4j
 public class HtmlMapper {
-    public static final String TARGET_ELEMENT_ID = "make-everything-ok-button";
 
-//    private static Logger LOGGER = LoggerFactory.getLogger(HtmlMapper.class);
+    private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(HtmlMapper.class);
+    public static final String TARGET_ELEMENT_ID = "make-everything-ok-button";
 
     private static String CHARSET_NAME = "utf8";
     private static Map<Node, Integer> similarityMap = new HashMap<>();
 
     public static void main(String[] args) {
 
-        // Jsoup requires an absolute file path to resolve possible relative paths in HTML,
-        // so providing InputStream through classpath resources is not a case
         String resourcePath = args[0];
         String diffFIlePath = args[1];
 
@@ -40,38 +39,47 @@ public class HtmlMapper {
             String textNode = buttonOpt.childNode(0).toString();
 
 
-            Element elementsOpt = getRootElement(new File(diffFIlePath));
+            Element rootElement = getRootElement(new File(diffFIlePath));
 
-            recursiveTraverse(elementsOpt, node -> {
-                similarityMap.put(node, 0);
-                node.attributes().forEach(attribute -> {
-                    String attrValue = targetElementAttributes.get(attribute.getKey());
-                    if (Objects.equals(attrValue, attribute.getValue())) {
-                        Integer similarityCount = similarityMap.get(node);
-                        similarityCount++;
-                        similarityMap.put(node, similarityCount);
-                    }
-                });
-                Optional<Node> tNode = node.childNodes().stream().filter(n -> n instanceof TextNode).findFirst();
-                tNode.ifPresent((t) -> {
-                    if (Objects.equals(t.toString(), textNode)) {
-                        Integer similarityCount = similarityMap.get(node);
-                        similarityCount++;
-                        similarityMap.put(node, similarityCount);
-                    }
-                });
+            if (rootElement != null) {
+                recursiveTraverse(rootElement, calculateNodeSimilarity(targetElementAttributes, textNode));
 
-            });
+                Node key = similarityMap.entrySet().stream()
+                        .max(comparingByValue()).get().getKey();
 
-            Node key = similarityMap.entrySet().stream()
-                    .max(comparingByValue()).get().getKey();
-
-            System.out.println(key.toString());
-
+                log.info(key.toString());
+            } else {
+                log.error("Check html file structure!");
+            }
         } else {
-            System.out.println("No element by id " + TARGET_ELEMENT_ID + "found !");
+            log.error("No element by id {} found !", TARGET_ELEMENT_ID);
         }
 
+    }
+
+    private static Consumer<Node> calculateNodeSimilarity(Map<String, String> targetElementAttributes, String textNode) {
+        return node -> {
+            similarityMap.put(node, 0);
+            node.attributes().forEach(attribute -> {
+                String attrValue = targetElementAttributes.get(attribute.getKey());
+                if (Objects.equals(attrValue, attribute.getValue())) {
+                    incrimentNodeSimilarity(node);
+                }
+            });
+            Optional<Node> tNode = node.childNodes().stream().filter(n -> n instanceof TextNode).findFirst();
+            tNode.ifPresent((t) -> {
+                if (Objects.equals(t.toString(), textNode)) {
+                    incrimentNodeSimilarity(node);
+                }
+            });
+
+        };
+    }
+
+    private static void incrimentNodeSimilarity(Node node) {
+        Integer similarityCount = similarityMap.get(node);
+        similarityCount++;
+        similarityMap.put(node, similarityCount);
     }
 
     private static Element findElementById(File htmlFile, String targetElementId) {
@@ -84,7 +92,7 @@ public class HtmlMapper {
             return doc.getElementById(targetElementId);
 
         } catch (IOException e) {
-            System.out.println("Error reading  " + htmlFile.getAbsolutePath() + "file");
+            log.error("Error reading  " + htmlFile.getAbsolutePath() + "file");
             return null;
         }
     }
@@ -98,17 +106,17 @@ public class HtmlMapper {
             return doc.body();
 
         } catch (IOException e) {
-            System.out.println("Error reading  " + htmlFile.getAbsolutePath() + "file");
+            log.error("Error reading  " + htmlFile.getAbsolutePath() + "file");
             return null;
         }
 
 
     }
 
-    private static void recursiveTraverse(Node doc, Consumer<Node> consumer) {
-        for (Node el : doc.childNodes()) {
-            consumer.accept(el);
-            recursiveTraverse(el, consumer);
+    private static void recursiveTraverse(Node node, Consumer<Node> consumer) {
+        for (Node currentNode : node.childNodes()) {
+            consumer.accept(currentNode);
+            recursiveTraverse(currentNode, consumer);
         }
     }
 
